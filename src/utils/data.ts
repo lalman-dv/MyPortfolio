@@ -1,0 +1,214 @@
+// utils/data.ts
+
+import {
+  Code2,
+  GraduationCap,
+  Briefcase,
+  Award,
+  Rocket,
+  Heart,
+  Coffee,
+  BookOpen,
+  Zap,
+  Database,
+  Server,
+  Cloud,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
+
+import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import type { LucideIcon } from "lucide-react";
+import type { IconType } from "react-icons";
+
+// -------------------- Interfaces --------------------
+
+export interface Skill {
+  name: string;
+  level: number; // percentage (0–100)
+  color: string; // Tailwind class
+}
+
+export interface SkillCategory {
+  title: string;
+  icon: LucideIcon;
+  description: string;
+  skills: Skill[];
+}
+
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  tag: string[];
+  liveUrl: string;
+  gitHubUrl: string;
+  category: string;
+  featured?: boolean; // optional: highlight key projects
+  image?: string; // optional: thumbnail for project card
+}
+
+export interface TechItem {
+  name: string;
+  icon?: IconType | LucideIcon; // optional icon for display
+}
+
+export interface JourneyStep {
+  year: string;
+  title: string;
+  company: string;
+  description: string;
+  icon: LucideIcon;
+  color: string; // Tailwind class
+}
+
+export interface Passion {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+export interface SocialLinks {
+  name: string;
+  icon: IconType;
+  url: string;
+  color: string; // Tailwind hover text color
+  bgColor: string; // Tailwind hover background color
+}
+
+// -------------------- Data --------------------
+
+export const SKILL_CATEGORY: SkillCategory[] = [
+  {
+    title: "Front-end",
+    icon: Code2,
+    description: "Crafting beautiful, responsive interfaces",
+    skills: [
+      { name: "React", level: 95, color: "bg-blue-600" },
+      { name: "TypeScript", level: 85, color: "bg-blue-700" },
+      { name: "NextJS", level: 90, color: "bg-gray-800" },
+      { name: "TailwindCSS", level: 92, color: "bg-cyan-600" },
+      { name: "FramerMotion", level: 82, color: "bg-red-600" },
+    ],
+  },
+  //I will add Backend, Tools, Soft Skills categories later
+];
+
+export const TECH_STACK: TechItem[] = [
+  { name: "JavaScript" },
+  { name: "HTML5" },
+  { name: "CSS3" },
+  { name: "Vite" },
+  { name: "Figma" },
+  { name: "Notion" },
+];
+
+export const PROJECTS: Project[] = [
+  {
+    id: 1,
+    title: "HackerNews Portal",
+    description:
+      "A modern HackerNews web built with React, TailwindCSS, and Framer Motion for dynamic UI.",
+    tag: ["React", "TailwindCSS", "FramerMotion", "HackerNews API"],
+    liveUrl: "#",
+    gitHubUrl: "#",
+    category: "FrontEnd",
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "AI Resume Studio",
+    description:
+      "An all-in-one AI-powered platform to create professional resumes and instantly rate them against industry standards.",
+    tag: ["React", "TailwindCSS", "TypeScript", "FramerMotion", "OpenAI API"],
+    liveUrl: "#",
+    gitHubUrl: "#",
+    category: "AI Tools",
+    featured: true,
+  },
+  {
+    id: 3,
+    title: "AI Interview Prep",
+    description:
+      "An intelligent app that helps users practice interviews with AI-generated questions, feedback, and performance insights.",
+    tag: ["React", "TailwindCSS", "TypeScript", "FramerMotion", "OpenAI API"],
+    liveUrl: "#",
+    gitHubUrl: "#",
+    category: "AI Tools",
+    featured: true,
+  },
+];
+
+export const JOURNEY_STEPS: JourneyStep[] = [
+  {
+    year: "early 2025",
+    title: "Started exploring coding journey",
+    company: "self-taught",
+    description:
+      "Began experimenting with HTML out of curiosity and quickly discovered a passion for building on the web, inspiring a decision to pursue coding full-time.",
+    icon: Briefcase,
+    color: "bg-green-500",
+  },
+  {
+    year: " mid 2025",
+    title: "Frontend development journey",
+    company: "self-taught",
+    description:
+      "Started Transition into structured learning with React, TypeScript, and TailwindCSS, focusing on creating responsive interfaces and modern web applications.",
+    icon: GraduationCap,
+    color: "bg-pink-500",
+  },
+];
+
+export const PASSION: Passion[] = [
+  {
+    icon: Heart,
+    title: "User Experience",
+    description:
+      "Designing clean, intuitive interfaces that delight users and enhance usability.",
+  },
+  {
+    icon: Coffee,
+    title: "Problem Solving",
+    description:
+      "Transforming complex challenges into simple, elegant, and practical solutions.",
+  },
+  {
+    icon: BookOpen,
+    title: "Continuous Learning",
+    description:
+      "Exploring new technologies and best practices to stay adaptable and innovative.",
+  },
+];
+
+export const SOCIAL_LINKS: SocialLinks[] = [
+  {
+    name: "GitHub",
+    icon: FiGithub,
+    url: "https://github.com/lalman-dv",
+    color: "hover:text-gray-400",
+    bgColor: "hover:bg-gray-800",
+  },
+  {
+    name: "LinkedIn",
+    icon: FiLinkedin,
+    url: "https://www.linkedin.com/in/lalman-dv", // update with your profile
+    color: "hover:text-blue-500",
+    bgColor: "hover:bg-blue-100",
+  },
+  {
+    name: "Twitter",
+    icon: FiTwitter,
+    url: "https://x.com/lalman_dv",
+    color: "hover:text-sky-400",
+    bgColor: "hover:bg-sky-100",
+  },
+  {
+    name: "Email",
+    icon: Mail,
+    url: "mailto:lalman.dev7@gmail.com",
+    color: "hover:text-red-500",
+    bgColor: "hover:bg-red-100",
+  },
+];
