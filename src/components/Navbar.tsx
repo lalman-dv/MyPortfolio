@@ -6,6 +6,7 @@ import { useState } from "react";
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const NAV_ITEMS: string[] = ["Home", "Skills", "Work", "About", "Contact"];
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -28,25 +29,28 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           className="flex items-center space-x-2"
         >
-          <Code2 size={24} className="text-red-400" />
-          <span className="text-lg ml-1">Lalman</span>
+          <Code2 size={24} className="text-blue-800" />
+          <span className="text-lg ml-1 bg-linear-to-r from-blue-600 to-purple-400 bg-clip-text text-transparent">
+            Lalman
+          </span>
         </motion.div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
-          {["Home", "Skills", "Work", "About", "Contact"].map((item) => (
-            <motion.button
-              key={item}
-              whileHover={{ y: -2 }}
-              onClick={() => scrollToSection(item.toLocaleLowerCase())}
-              className={`text-sm uppercase tracking-wider transition-colors ${
-                theme === "dark"
-                  ? "text-gray-400 hover:text-white"
-                  : "text-gray-600 hover:text-gray-900"
-              }`}
-            >
-              {item}
-            </motion.button>
+        <ul className="hidden md:flex items-center space-x-6">
+          {NAV_ITEMS.map((item) => (
+            <li key={item}>
+              <motion.button
+                whileHover={{ y: -2 }}
+                onClick={() => scrollToSection(item.toLocaleLowerCase())}
+                className={`text-sm uppercase tracking-wider transition-colors ${
+                  theme === "dark"
+                    ? "text-gray-400 hover:text-white"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                {item}
+              </motion.button>
+            </li>
           ))}
 
           <motion.button
@@ -61,10 +65,10 @@ const Navbar = () => {
           >
             {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </motion.button>
-        </div>
+        </ul>
         {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center space-x-4 ">
-          <motion.button
+        <li className="md:hidden flex items-center space-x-4 ">
+          <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={toggleTheme}
@@ -75,8 +79,10 @@ const Navbar = () => {
             }`}
           >
             {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-          </motion.button>
+          </motion.a>
           <motion.button
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -88,13 +94,13 @@ const Navbar = () => {
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </motion.button>
-        </div>
+        </li>
       </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
+          <motion.ul
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -104,21 +110,23 @@ const Navbar = () => {
               theme === "dark" ? "border-gray-800" : "border-gray-200"
             }`}
           >
-            {["Home", "Skills", "Work", "About", "Contact"].map((item) => (
-              <motion.button
-                key={item}
-                whileHover={{ x: 5 }}
-                onClick={() => scrollToSection(item.toLocaleLowerCase())}
-                className={`block w-full text-left py-2 text-sm uppercase tracking-wider transition-colors ${
-                  theme === "dark"
-                    ? "text-gray-400 hover:text-white"
-                    : "text-gray-600 hover:text-gray-900"
-                }`}
-              >
-                {item}
-              </motion.button>
+            {NAV_ITEMS.map((item) => (
+              <li key={item}>
+                <motion.a
+                  href={`#${item.toLowerCase()}`}
+                  whileHover={{ x: 5 }}
+                  onClick={() => scrollToSection(item.toLowerCase())}
+                  className={`block w-full text-left py-2 text-sm uppercase tracking-wider transition-colors ${
+                    theme === "dark"
+                      ? "text-gray-400 hover:text-white"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
+                >
+                  {item}
+                </motion.a>
+              </li>
             ))}
-          </motion.div>
+          </motion.ul>
         )}
       </AnimatePresence>
     </motion.nav>
