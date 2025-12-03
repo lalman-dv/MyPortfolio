@@ -1,4 +1,4 @@
-import { motion, useScroll, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Code2, Sun, Moon, Menu, X } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";

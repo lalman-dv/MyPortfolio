@@ -1,18 +1,10 @@
-// utils/data.ts
-
 import {
   Code2,
   GraduationCap,
   Briefcase,
-  Award,
-  Rocket,
   Heart,
   Coffee,
   BookOpen,
-  Zap,
-  Database,
-  Server,
-  Cloud,
   Mail,
   MapPin,
   Phone,
@@ -26,8 +18,8 @@ import type { IconType } from "react-icons";
 
 export interface Skill {
   name: string;
-  level: number; // percentage (0–100)
-  color: string; // Tailwind class
+  level: number; 
+  color: string;
 }
 
 export interface SkillCategory {
@@ -45,13 +37,13 @@ export interface Project {
   liveUrl: string;
   gitHubUrl: string;
   category: string;
-  featured?: boolean; // optional: highlight key projects
-  image?: string; // optional: thumbnail for project card
+  featured?: boolean; 
+  image?: string;
 }
 
 export interface TechItem {
   name: string;
-  icon?: IconType | LucideIcon; // optional icon for display
+  icon?: IconType | LucideIcon;
 }
 
 export interface JourneyStep {
@@ -60,7 +52,7 @@ export interface JourneyStep {
   company: string;
   description: string;
   icon: LucideIcon;
-  color: string; // Tailwind class
+  color: string; 
 }
 
 export interface Passion {
@@ -198,7 +190,7 @@ export const SOCIAL_LINKS: SocialLinks[] = [
   {
     name: "LinkedIn",
     icon: FiLinkedin,
-    url: "https://www.linkedin.com/in/lalman-dv", // update with your profile
+    url: "https://www.linkedin.com/in/lalman-dv",
     color: "hover:text-blue-500",
     bgColor: "hover:bg-blue-100",
   },
