@@ -14,8 +14,7 @@ import {
 } from "lucide-react";
 
 import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
-import { SiJavascript, SiHtml5, SiCss3, SiFigma } from "react-icons/si";
-import { VscNotebook } from "react-icons/vsc";
+import { SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
 import { VscRocket } from "react-icons/vsc";
 import type { LucideIcon } from "lucide-react";
 import type { IconType } from "react-icons";
@@ -132,7 +131,6 @@ export const SKILL_CATEGORY: SkillCategory[] = [
       { name: "Continuous Learning", level: 90, color: "bg-green-500" },
     ],
   },
-  //I will add Backend, Tools, Soft Skills categories later
 ];
 
 export const TECH_STACK: TechItem[] = [
