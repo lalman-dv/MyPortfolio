@@ -235,6 +235,21 @@ const HeroSection = () => {
                 >
                   .
                 </span>
+
+                <span
+                  className={
+                    theme === "dark" ? "text-gray-600" : "text-gray-500"
+                  }
+                >
+                  NextJS
+                </span>
+                <span
+                  className={
+                    theme === "dark" ? "text-gray-700" : "text-gray-400"
+                  }
+                >
+                  .
+                </span>
                 <span
                   className={
                     theme === "dark" ? "text-gray-600" : "text-gray-500"
@@ -370,7 +385,7 @@ const HeroSection = () => {
                 {/* Tech Stack Desktop */}
                 <motion.div
                   variants={itemVariants}
-                  className="flex items-center space-x-8 text-sm uppercase tracking-widest absolute -top-20"
+                  className="flex items-center space-x-8 text-sm uppercase tracking-widest absolute -top-20 -left-21"
                 >
                   <span
                     className={
@@ -378,6 +393,20 @@ const HeroSection = () => {
                     }
                   >
                     React
+                  </span>
+                  <span
+                    className={
+                      theme === "dark" ? "text-gray-700" : "text-gray-400"
+                    }
+                  >
+                    .
+                  </span>
+                  <span
+                    className={
+                      theme === "dark" ? "text-gray-600" : "text-gray-500"
+                    }
+                  >
+                    NextJS
                   </span>
                   <span
                     className={
