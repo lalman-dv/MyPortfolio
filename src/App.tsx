@@ -1,5 +1,6 @@
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import { ThemeProvider } from "./context/ThemeContext";
 
@@ -10,6 +11,7 @@ const App = () => {
         <Navbar />
         <HeroSection />
         <Skills />
+        <Projects />
       </div>
     </ThemeProvider>
   );

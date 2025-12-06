@@ -100,7 +100,7 @@ const Skills = () => {
           variants={containerVariants}
           className="grid md:grid-cols-2 gap-8 lg:gap-12"
         >
-          {SKILL_CATEGORY.map((category) => (
+          {SKILL_CATEGORY.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               variants={itemVariants}
@@ -135,7 +135,7 @@ const Skills = () => {
               {/* Skills List */}
 
               <div className="space-y-4">
-                {category.skills.map((skill) => (
+                {category.skills.map((skill, skillIndex) => (
                   <div key={skill.name} className="group">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-sm font-medium">{skill.name}</span>
@@ -191,7 +191,7 @@ const Skills = () => {
             variants={itemVariants}
             className="flex flex-wrap justify-center gap-3"
           >
-            {TECH_STACK.map((tech) => (
+            {TECH_STACK.map((tech, index) => (
               <motion.span
                 key={tech.name}
                 whileHover={{ y: -2, scale: 1.05 }}
