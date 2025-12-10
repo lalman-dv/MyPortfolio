@@ -31,8 +31,16 @@ This is my personal portfolio built to showcase projects, skills, and creativity
 ---
 
 ## 📸 Screenshots
-
 ### Portfolio Desktop
+
+<img width="1440" height="900" alt="Screenshot 2025-12-10 at 3 31 37 PM" src="https://github.com/user-attachments/assets/bc84d58a-b32b-4a2c-8376-99cba043f21f" />
+
+<img width="1440" height="900" alt="Screenshot 2025-12-10 at 3 32 17 PM" src="https://github.com/user-attachments/assets/998352d5-cfc7-4c99-b7a4-b08949c9e82d" />
+<img width="1440" height="900" alt="Screenshot 2025-12-10 at 3 32 28 PM" src="https://github.com/user-attachments/assets/6c2c4e7e-9b61-436d-a17b-0e34288d697c" /><img width="1440" height="900" alt="Screenshot 2025-12-10 at 3 32 33 PM" src="https://github.com/user-attachments/assets/c8e6f80f-1739-4d5c-91a4-eb6172801da8" />
+
+
+
+
 
 ---
 
@@ -43,7 +51,7 @@ Want to collaborate or discuss opportunities?
 - **Email:** [lalman.dev7@gmail.com](mailto:lalman.dev7@gmail.com)
 - **GitHub:** [github.com/lalman-dv](https://github.com/lalman-dv)
 - **LinkedIn:** [https://www.linkedin.com/in/lalman-lalman-34490a163/](https://www.linkedin.com/in/lalman-lalman-34490a163/)
-- **Twitter:** [twitter.com/lalman](https://x.com/imchaudhary2)
+- **Twitter:** [https://x.com/imchaudhary2](https://x.com/imchaudhary2)
 
 ---
 
