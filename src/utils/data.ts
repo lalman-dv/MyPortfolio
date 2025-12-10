@@ -20,11 +20,12 @@ import project1 from "../assets/hackernews.png";
 import project3 from "../assets/interviewapp.png";
 import project2 from "../assets/resumeBuilder.png";
 
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { SiJavascript, SiHtml5, SiCss3 } from "react-icons/si";
 import { VscRocket } from "react-icons/vsc";
 import type { LucideIcon } from "lucide-react";
 import type { IconType } from "react-icons";
+import { FaXTwitter } from "react-icons/fa6";
 
 // -------------------- Interfaces --------------------
 
@@ -272,8 +273,8 @@ export const SOCIAL_LINKS: SocialLinks[] = [
     bgColor: "hover:bg-blue-100",
   },
   {
-    name: "Twitter",
-    icon: FiTwitter,
+    name: "X (Twitter)",
+    icon: FaXTwitter,
     url: "https://x.com/imchaudhary2",
     color: "hover:text-sky-400",
     bgColor: "hover:bg-sky-100",
