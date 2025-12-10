@@ -4,6 +4,7 @@ Crafting digital experiences with **passion, precision, and a touch of magic** �
 This is my personal portfolio built to showcase projects, skills, and creativity as a frontend developer.
 
 ---
+🔗 **Live Demo:** [lalman-rho.vercel.app](https://lalman-rho.vercel.app/)
 
 ## 🌟 Features
 
