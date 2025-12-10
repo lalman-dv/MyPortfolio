@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, type FormEvent } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
 import { Send } from "lucide-react";
@@ -7,9 +7,16 @@ import { containerVariants, itemVariants } from "../utils/variants";
 import TextInput from "./TextInput";
 import SuccessModel from "./SuccessModel";
 
+type FormKeys = "name" | "email" | "message";
+
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 const ContactSection = () => {
   const { theme } = useTheme();
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
@@ -23,10 +30,10 @@ const ContactSection = () => {
     offset: ["start end", "end start"],
   });
   const y = useTransform(scrollYProgress, [0, 1], [50, -50]);
-  const handleInputChange = (key, value) => {
+  const handleInputChange = (key: FormKeys, value: string) => {
     setFormData({ ...formData, [key]: value });
   };
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -186,7 +193,7 @@ const ContactSection = () => {
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-medium mb-6">Contact Information</h3>
               <div className="space-y-4">
-                {CONTACT_INFO.map((info, index) => (
+                {CONTACT_INFO.map((info) => (
                   <motion.div
                     key={info.label}
                     variants={itemVariants}
@@ -267,6 +274,41 @@ const ContactSection = () => {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={containerVariants}
+          className="text-center mt-20"
+        >
+          <motion.div
+            variants={itemVariants}
+            className={`max-w-2xl max-auto p-8 rounded-2xl text-sm border ${
+              theme === "dark"
+                ? "tbg-gray-800 border-gray-700"
+                : "bg-gray-50/50 border-gray-200"
+            }`}
+          >
+            <h3 className="text-xl font-medium mb-4">Prefer a quick call?</h3>
+            <p
+              className={`mb-6 ${
+                theme === "dark" ? "text-gray-400" : "text-gray-600"
+              }`}
+            >
+              Sometime a conversation is worth a thousand messages . Feel free
+              to reach out via email or social media to schedule a call. I'm
+              happy to discuss your project needs and how I can help.
+            </p>
+            <motion.button
+              whileHover={{ y: -2, scale: 1.03 }}
+              whileTap={{ scale: 0.95 }}
+              className={`px-6 py-3 rounded-full border font-medium transition-all duration-300 bg-linear-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white`}
+            >
+              Schedule a Call
+            </motion.button>
+          </motion.div>
+        </motion.div>
       </div>
       <SuccessModel
         showSuccess={showSuccess}
