@@ -113,8 +113,8 @@ const AboutMe = () => {
                   theme === "dark" ? "text-gray-400" : "text-gray-600"
                 }`}
               >
-                Beyond coding, I’m passionate about experimenting with emerging
-                frameworks and supporting open‑source communities. The constant
+                Beyond coding, I'm passionate about experimenting with emerging
+                frameworks and supporting open-source communities. The constant
                 evolution of web technologies inspires me to create digital
                 experiences that are both meaningful and innovative.
               </p>
@@ -265,13 +265,16 @@ const AboutMe = () => {
               Ready to bring your vision to reality?
             </p>
             <motion.button
+              onClick={() =>
+                (window.location.href = "mailto:lalman.dev7@gmail.com")
+              }
               type="button"
               aria-label="Start collaboration"
               whileHover={{ y: -2, scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-linear-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500 px-8 py-3 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
+              className="bg-linear-to-r from-cyan-400 via-blue-600 to-purple-600 text-white hover:from-cyan-500 hover:to-purple-500 px-8 py-3 rounded-full text-sm uppercase tracking-wider font-medium transition-all duration-300"
             >
-              Let’s build something great together
+              Let's build something great together
             </motion.button>
           </motion.div>
         </motion.div>

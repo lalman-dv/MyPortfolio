@@ -271,14 +271,14 @@ export const SOCIAL_LINKS: SocialLinks[] = [
   {
     name: "GitHub",
     icon: FiGithub,
-    url: "https://github.com/lalman-dv",
+    url: "https://github.com/lalman-dev/",
     color: "hover:text-gray-400",
     bgColor: "hover:bg-gray-800",
   },
   {
     name: "LinkedIn",
     icon: FiLinkedin,
-    url: "https://www.linkedin.com/in/lalman-lalman-34490a163/",
+    url: "https://www.linkedin.com/in/lalman-dev/",
     color: "hover:text-blue-500",
     bgColor: "hover:bg-blue-100",
   },
