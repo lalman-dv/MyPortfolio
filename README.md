@@ -28,11 +28,15 @@ This is my personal portfolio built to showcase projects, skills, and creativity
 ---
 
 ## 🛠️ Tech Stack
-
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![EmailJS](https://img.shields.io/badge/EmailJS-FFB400?style=for-the-badge&logo=gmail&logoColor=white)
+![Lucide React](https://img.shields.io/badge/Lucide-React-0A0A0A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![React Icons](https://img.shields.io/badge/React-Icons-CA4245?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-Build-646CFF?style=for-the-badge&logo=vite&logoColor=FFD62E)
+
 
 | Category      | Tools & Libraries         |
 | ------------- | ------------------------- |
