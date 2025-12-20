@@ -66,6 +66,5 @@ cd portfolio
 npm install
 npm run dev
 ```
-
 📝 License
 © Lalman 2025 · Built with React, TypeScript, Motion & Tailwind · Designed with care
