@@ -33,12 +33,7 @@ This is my personal portfolio built to showcase projects, skills, and creativity
 
 This project uses **Vitest + React Testing Library** for unit and UI testing.
 
-### Run Tests
-
-```bash
-npm test
 Current coverage: 72% ✅
-```
 
 ## 🛠️ Tech Stack
 
@@ -93,7 +88,7 @@ git clone https://github.com/lalman-dev/myportfolio.git
 cd portfolio
 npm install
 npm run dev
-````
+```
 
 📝 License
 © Lalman 2025 · Built with React, TypeScript, Motion & Tailwind · Designed with care
